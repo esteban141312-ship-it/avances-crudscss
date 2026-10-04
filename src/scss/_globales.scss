@@ -1,0 +1,46 @@
+@use 'variables' as v;
+body {
+    background-color: v.$color-fondo;
+    font-family: v.$fuente-principal;
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor-btn {
+    text-align: center; // Como el botón es inline-block, esto lo centrará automáticamente
+}
+
+
+.btn {
+    // 1. Comportamiento de bloque para aceptar padding y márgenes
+    display: inline-block;
+    
+    // 2. Quitar estilos por defecto del enlace
+    text-decoration: none;
+    
+    // 3. Colores y espaciado (Relleno)
+    background-color: v.$color-primario; // Azul primario (puedes usar tu variable)
+    color: v.$color-fondo;
+    padding: 12px 24px;       // Espacio interno (arriba/abajo - izquierda/derecha)
+    
+    // 4. Bordes y tipografía
+    border-radius: 6px;       // Esquinas redondeadas
+    font-size: 1rem;
+    font-weight: 600;         // Texto ligeramente en negrita
+    text-align: center;
+    
+    // 5. Transición suave para los efectos
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+
+    // Efecto cuando pasas el mouse por encima
+    &:hover {
+        background-color: v.$color-oscuro; // Un azul más oscuro
+    }
+
+    // Efecto cuando el usuario hace clic (opcional pero le da un toque premium)
+    &:active {
+        transform: scale(0.98);    // Se encoge un poco simulanzo un clic real
+    }
+   
+}
