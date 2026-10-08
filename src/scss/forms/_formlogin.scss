@@ -1,0 +1,23 @@
+@use 'variables' as v;
+
+.contenedor-todo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 50px auto;
+}
+
+.contenedor-form {
+    width: 400px;
+    padding: 30px;
+    // border-style: solid;
+    // border-color: black;
+    // border-radius: 10px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: v.$sombra;
+    display: block;
+    justify-content: center;
+   
+}

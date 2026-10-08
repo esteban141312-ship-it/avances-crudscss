@@ -1,5 +1,5 @@
 <?php 
-include "../../db/conexion.php";
+include __DIR__ . "../../db/conexion.php";
 require_once "../funciones.php";
 
 $idUser=$_GET['id'];

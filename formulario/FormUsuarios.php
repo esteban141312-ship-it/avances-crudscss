@@ -2,7 +2,7 @@
 session_start();
 ?>
 
-<h1>Registrar Usuario</h1>
+<h1>Agregar Usuario</h1>
 <form action="../index.php" method="POST" autocomplete="off">
     <label for="nombre">Nombre:</label>
     <input type="text" name="nombre" required><br>

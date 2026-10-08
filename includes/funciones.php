@@ -41,4 +41,31 @@ function obtener_usuarios() {
     $resultado = mysqli_query($conex, $sql);
     return $resultado; //consulta
 }
+
+
+function obtener_barcos(){
+    require __DIR__ . "/../db/conexion.php";
+
+    $sql = "SELECT * FROM barco";
+    $resultado = mysqli_query($conex,$sql);
+    return $resultado;
+}
+
+function obtener_socio(){
+        require __DIR__ . "/../db/conexion.php";
+
+    $sql = "SELECT * FROM socio";
+    $resultado = mysqli_query($conex,$sql);
+    return $resultado;
+}
+
+function obtener_salidas(){
+        require __DIR__ . "/../db/conexion.php";
+
+    $sql = "SELECT * FROM salidas";
+    $resultado = mysqli_query($conex,$sql);
+    return $resultado;
+}
 ?>
+
+

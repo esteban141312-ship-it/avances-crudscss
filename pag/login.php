@@ -1,6 +1,6 @@
 <?php
 session_start();
-require "../db/conexion.php";
+require_once __DIR__. "/../db/conexion.php";
 
 if (isset($_POST['login'])) {
     $nombre = $_POST['nombre'];

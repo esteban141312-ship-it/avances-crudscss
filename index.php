@@ -12,7 +12,7 @@ if (isset($_SESSION['usuario'])) {
     $usuarios = obtener_usuarios($conex);
 }
 if (isset($_SESSION['usuario'])) {
-    header("Location: pag/users.php");
+    header("Location: pag/navOpciones.php");
     exit;
 }
 ?>
@@ -27,9 +27,10 @@ if (isset($_SESSION['usuario'])) {
 
 <body>
 
-    <br>
+
     <div class="contenedor-btn">
-    <a class="btn" href="formulario/FormLogin.php">Ir al Login</a>
+     
+        <a class="btn" href="formulario/FormLogin.php">Login usuarios</a>
     </div>
 
     <!-- 
@@ -66,7 +67,7 @@ if (isset($_SESSION['usuario'])) {
         }
     }
     ?>
-    
+
 </body>
 
 </html>

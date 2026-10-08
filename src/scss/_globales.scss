@@ -6,22 +6,29 @@ body {
     padding: 0;
 }
 
-.contenedor-btn {
-    text-align: center; // Como el botón es inline-block, esto lo centrará automáticamente
+.contenedor-btn { 
+    display: flex; 
+    flex-direction: column; 
+    text-align: center;  
+    background-color: v.$color-oscuro; 
+    margin: 80px auto; 
+    border-radius: 20px; 
+    padding: 30px; 
+     width: 300px;
 }
 
 
 .btn {
     // 1. Comportamiento de bloque para aceptar padding y márgenes
-    display: inline-block;
+    // display: inline-block;
     
     // 2. Quitar estilos por defecto del enlace
     text-decoration: none;
     
     // 3. Colores y espaciado (Relleno)
-    background-color: v.$color-primario; // Azul primario (puedes usar tu variable)
+    background-color: v.$color-oscuro; 
     color: v.$color-fondo;
-    padding: 12px 24px;       // Espacio interno (arriba/abajo - izquierda/derecha)
+    padding: 12px 24px;       
     
     // 4. Bordes y tipografía
     border-radius: 6px;       // Esquinas redondeadas
@@ -33,14 +40,85 @@ body {
     transition: background-color 0.3s ease, transform 0.2s ease;
     cursor: pointer;
 
-    // Efecto cuando pasas el mouse por encima
+   
     &:hover {
-        background-color: v.$color-oscuro; // Un azul más oscuro
+        background-color: v.$color-primario; // Un azul más oscuro
     }
 
-    // Efecto cuando el usuario hace clic (opcional pero le da un toque premium)
+
     &:active {
         transform: scale(0.98);    // Se encoge un poco simulanzo un clic real
     }
    
 }
+
+// .contenedor-botones-principales{
+//     display: flex;
+//     justify-content: space-between;
+//     margin: 30px, auto;
+//      width: 400px;
+// }
+
+table{
+    
+    margin: 50px auto;
+    border-spacing: 20px;
+    box-shadow: v.$sombra;
+    background-color: v.$color-blanco;
+    border-radius: 25px;
+   
+    
+}
+
+
+.contenedor-crrss{
+    display:flex;
+    justify-content:flex-end;
+  
+    margin: 30px, auto;
+     
+    
+    
+}
+
+.btn-cerrarsesion{
+    text-decoration: none;
+    background-color: v.$color-rojo; 
+    color: v.$color-fondo;
+    padding: 12px 24px;       
+    
+    // 4. Bordes y tipografía
+    border-radius: 6px;       // Esquinas redondeadas
+    font-size: 1rem;
+    font-weight: 600;         // Texto ligeramente en negrita
+    text-align: center;
+    
+    // 5. Transición suave para los efectos
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+
+   
+    &:hover {
+        background-color: v.$color-rojoclaro; 
+    }
+
+
+    &:active {
+        transform: scale(0.98);    // Se encoge un poco simulanzo un clic real
+    }
+}
+
+.header{
+    display: flex;
+    justify-content:space-between;
+    height: 50px;
+    align-items: center;
+    background-color: v.$color-oscuro;
+    box-shadow: v.$sombra;
+   
+}
+
+a{
+    text-decoration:none;
+}
+
