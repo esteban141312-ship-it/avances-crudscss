@@ -20,8 +20,16 @@
 
     <br><br>
 
-    <label for="socio_cedula">Cédula del socio:</label>
-    <input type="text" id="socio_cedula" name="socio_cedula"  required>
+ <label for="Barcos_Matricula">cedula socio:</label>
+    <select id="Barcos_Matricula" name="Barcos_Matricula" required>
+
+        <option value="">Seleccione un socio</option>
+
+        <option value="">
+            <!-- Aquí irá la consulta de los socios -->
+        </option>
+     
+    </select>
 
     <br><br>
 

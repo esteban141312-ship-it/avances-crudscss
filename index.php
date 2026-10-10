@@ -26,39 +26,10 @@ if (isset($_SESSION['usuario'])) {
 </head>
 
 <body>
-
-
-    <div class="contenedor-btn">
-     
-        <a class="btn" href="formulario/FormLogin.php">Login usuarios</a>
-    </div>
-
-    <!-- 
-        <h2>Crear Usuario</h2>
-        <form action="index.php" method="POST" autocomplete="off">
-            <label>Nombre:</label>
-            <input type="text" name="nombre" required><br>
-
-            <label>Apellido:</label>
-            <input type="text" name="apellido" required><br>
-
-            <label>Cédula:</label>
-            <input type="text" name="cedula" required><br>
-
-            <label>Correo:</label>
-            <input type="email" name="correo" required><br>
-
-            <label>Teléfono:</label>
-            <input type="text" name="telefono" required><br>
-
-            <label>Contraseña:</label>
-            <input type="password" name="contraseña" required><br>
-
-            <label>Confirmar Contraseña:</label>
-            <input type="password" name="confcontraseña" required><br>
-
-            <input type="submit" name="agregar" value="Registrar">
-        </form> -->
+<?php
+// require __DIR__ . "/pag/login.php";
+?>
+<a href="formulario/FormLogin.php">log in</a>
 
     <?php
     if (isset($adduser)) {
