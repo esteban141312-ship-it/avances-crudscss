@@ -1,4 +1,5 @@
 @use 'variables' as v;
+
 body {
     background-color: v.$color-fondo;
     font-family: v.$fuente-principal;
@@ -6,50 +7,50 @@ body {
     padding: 0;
 }
 
-.contenedor-btn { 
-    display: flex; 
-    flex-direction: column; 
-    text-align: center;  
-    background-color: v.$color-oscuro; 
-    margin: 80px auto; 
-    border-radius: 20px; 
-    padding: 30px; 
-     width: 300px;
+.contenedor-btn {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: v.$color-oscuro;
+    margin: 80px auto;
+    border-radius: 20px;
+    padding: 30px;
+    width: 300px;
 }
 
 
 .btn {
     // 1. Comportamiento de bloque para aceptar padding y márgenes
     // display: inline-block;
-    
+
     // 2. Quitar estilos por defecto del enlace
     text-decoration: none;
-    
+
     // 3. Colores y espaciado (Relleno)
-    background-color: v.$color-oscuro; 
+    background-color: v.$color-oscuro;
     color: v.$color-fondo;
-    padding: 12px 24px;       
-    
+    padding: 12px 24px;
+
     // 4. Bordes y tipografía
-    border-radius: 6px;       // Esquinas redondeadas
+    border-radius: 6px; // Esquinas redondeadas
     font-size: 1rem;
-    font-weight: 600;         // Texto ligeramente en negrita
+    font-weight: 600; // Texto ligeramente en negrita
     text-align: center;
-    
+
     // 5. Transición suave para los efectos
     transition: background-color 0.3s ease, transform 0.2s ease;
     cursor: pointer;
 
-   
+
     &:hover {
         background-color: v.$color-primario; // Un azul más oscuro
     }
 
 
     &:active {
-        transform: scale(0.98);    // Se encoge un poco simulanzo un clic real
+        transform: scale(0.98); // Se encoge un poco simulanzo un clic real
     }
-   
+
 }
 
 // .contenedor-botones-principales{
@@ -59,66 +60,177 @@ body {
 //      width: 400px;
 // }
 
-table{
-    
+table {
+
     margin: 50px auto;
-    border-spacing: 20px;
+    border-spacing: 30px;
     box-shadow: v.$sombra;
     background-color: v.$color-blanco;
     border-radius: 25px;
-   
-    
+
 }
 
 
-.contenedor-crrss{
-    display:flex;
-    justify-content:flex-end;
-  
+.contenedor-crrss {
+    display: flex;
+    justify-content: flex-end;
+
     margin: 30px, auto;
-     
-    
-    
+
+
+
 }
 
-.btn-cerrarsesion{
+.btn-cerrarsesion {
     text-decoration: none;
-    background-color: v.$color-rojo; 
+    background-color: v.$color-rojo;
     color: v.$color-fondo;
-    padding: 12px 24px;       
-    
+    padding: 12px 24px;
+
     // 4. Bordes y tipografía
-    border-radius: 6px;       // Esquinas redondeadas
+    border-radius: 6px; // Esquinas redondeadas
     font-size: 1rem;
-    font-weight: 600;         // Texto ligeramente en negrita
+    font-weight: 600; // Texto ligeramente en negrita
     text-align: center;
-    
+
     // 5. Transición suave para los efectos
     transition: background-color 0.3s ease, transform 0.2s ease;
     cursor: pointer;
 
-   
+
     &:hover {
-        background-color: v.$color-rojoclaro; 
+        background-color: v.$color-rojoclaro;
     }
 
 
     &:active {
-        transform: scale(0.98);    // Se encoge un poco simulanzo un clic real
+        transform: scale(0.98); // Se encoge un poco simulanzo un clic real
     }
 }
 
-.header{
+.header {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     height: 50px;
     align-items: center;
     background-color: v.$color-oscuro;
     box-shadow: v.$sombra;
-   
+
 }
 
-a{
-    text-decoration:none;
+a {
+    text-decoration: none;
 }
 
+.contenedor-btn-agregar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-actualizar {
+    text-decoration: none;
+
+    // 3. Colores y espaciado (Relleno)
+    background-color: v.$color-gris;
+    color: v.$color-fondo;
+    padding: 12px 24px;
+
+    // 4. Bordes y tipografía
+    border-radius: 6px; // Esquinas redondeadas
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+
+
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+
+
+    &:hover {
+        background-color: v.$color-primario;
+    }
+
+
+    &:active {
+        transform: scale(0.98);
+    }
+}
+
+.btn-eliminar {
+    text-decoration: none;
+
+    // 3. Colores y espaciado (Relleno)
+    background-color: v.$color-naranja;
+    color: v.$color-fondo;
+    padding: 12px 24px;
+
+    // 4. Bordes y tipografía
+    border-radius: 6px; // Esquinas redondeadas
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+
+
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+
+
+    &:hover {
+        background-color: v.$color-primario;
+    }
+
+
+    &:active {
+        transform: scale(0.98);
+    }
+}
+
+label {
+    display: flex;
+    text-align: left;
+}
+
+input {
+    padding: 14px 16px;
+    margin: 8px 0 20px;
+    background-color: v.$color-blanco;
+    color: v.$color-gris;
+    border: 2px solid v.$color-gris;
+    border-radius: 12px;
+    font-size: 15px;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+width: 100%;
+
+}
+
+.btn-iniciarsesion{
+     text-decoration: none;
+
+    // 3. Colores y espaciado (Relleno)
+    background-color: v.$color-gris;
+    color: v.$color-fondo;
+    padding: 12px 24px;
+
+    // 4. Bordes y tipografía
+    border-radius: 6px; // Esquinas redondeadas
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+
+
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+
+
+    &:hover {
+        background-color: v.$color-primario;
+    }
+
+
+    &:active {
+        transform: scale(0.98);
+    }
+}

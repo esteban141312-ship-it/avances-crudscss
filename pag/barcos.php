@@ -56,9 +56,9 @@ $barcos = obtener_barcos();
                     <td><?= $b['cuota_amarre'] ?></td>
                     <td><?= $b['socio_cedula'] ?></td>
                     <td>
-                        <a href="../includes/users/EliminarUs.php?id=<?php echo $b['matricula'] ?>">Eliminar</a>
+                        <a href="../includes/barcos/eliminarBarco.php?matricula=<?php echo $b['matricula'] ?>">Eliminar</a>
                         <?php echo " || " ?>
-                        <a href="../formulario/modificar.php?id=<?php echo $b['matricula'] ?>">actualizar</a>
+                        <a href="../includes/barcos/actualizarBarco.php?matricula=<?php echo $b['matricula'] ?>">actualizar</a>
                     </td>
                 </tr>
             <?php endwhile; ?>
@@ -71,7 +71,7 @@ $barcos = obtener_barcos();
 
 
 
-    <a class="btn" href="../formulario/createbarcosForm.php">Nuevo barco</a>
+    <a class="btn" href="../includes/barcos/createBarcos.php">Nuevo barco</a>
 
 
 

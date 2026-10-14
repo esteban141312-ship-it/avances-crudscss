@@ -1,8 +1,14 @@
 <?php
 session_start();
 ?>
-
+<head>
+    <meta charset="UTF-8">
+    <title>crear usuario</title>
+    <link rel="stylesheet" href="../dist/css/style.css">
+</head>
+<div class="contenedor-todo">
 <h1>Agregar Usuario</h1>
+<div class="contenedor-form">
 <form action="../index.php" method="POST" autocomplete="off">
     <label for="nombre">Nombre:</label>
     <input type="text" name="nombre" required><br>
@@ -25,6 +31,8 @@ session_start();
     <label for="confcontraseña">Confirmar Contraseña:</label>
     <input type="password" name="confcontraseña" required><br>
 
-    <input type="submit" name="agregar" value="Registrar">
+    <input class="btn"type="submit" name="agregar" value="Registrar">
 </form>
-<a href="FormLogin.php">iniciar sesion</a>
+</div>
+<a class="btn-iniciarsesion" href="../pag/login.php">iniciar sesion</a>
+</div>

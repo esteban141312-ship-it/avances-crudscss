@@ -1,4 +1,8 @@
-<form action="../includes/barcos/createBarcos.php" method="POST">
+<?php
+require __DIR__ . "/../includes/funciones.php";
+$resultado= obtener_socio();
+?>
+<form action="" method="POST">
 
     <label for="matricula">Matrícula:</label>
     <input type="text" id="matricula" name="matricula"  required>
@@ -20,15 +24,15 @@
 
     <br><br>
 
- <label for="Barcos_Matricula">cedula socio:</label>
-    <select id="Barcos_Matricula" name="Barcos_Matricula" required>
+ <label for="cedula">cedula socio:</label>
+    <select id="cedula" name="cedula" required>
 
         <option value="">Seleccione un socio</option>
-
-        <option value="">
-            <!-- Aquí irá la consulta de los socios -->
+         <?php while ($socio = mysqli_fetch_assoc($resultado)) { ?>
+        <option value="<?php echo $socio['cedula']; ?>">
+             <?php echo $socio['nombres'] . " " . $socio['apellidos']; ?>
         </option>
-     
+        <?php } ?>
     </select>
 
     <br><br>

@@ -11,10 +11,6 @@ $usuarios = null;
 if (isset($_SESSION['usuario'])) {
     $usuarios = obtener_usuarios($conex);
 }
-if (isset($_SESSION['usuario'])) {
-    header("Location: pag/navOpciones.php");
-    exit;
-}
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -27,9 +23,9 @@ if (isset($_SESSION['usuario'])) {
 
 <body>
 <?php
-// require __DIR__ . "/pag/login.php";
+require __DIR__ . "/pag/login.php"
 ?>
-<a href="formulario/FormLogin.php">log in</a>
+
 
     <?php
     if (isset($adduser)) {

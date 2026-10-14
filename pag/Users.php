@@ -42,14 +42,14 @@ $usuarios = obtener_usuarios();
             <td><?= $usuar['correo'] ?></td>
             <td><?= $usuar['celular'] ?></td>
             <td>
-                <a href="../includes/users/EliminarUs.php?id=<?php echo $usuar['id'] ?>">Eliminar</a>
+                <a class="btn-eliminar" href="../includes/users/EliminarUs.php?id=<?php echo $usuar['id'] ?>">Eliminar</a>
                 <?php echo " || " ?>
-                <a href="../formulario/modificar.php?id=<?php echo $usuar['id'] ?>">actualizar</a>
+                <a class="btn-actualizar" href="../formulario/modificar.php?id=<?php echo $usuar['id'] ?>">actualizar</a>
             </td>
         </tr>
     <?php endwhile; ?>
 
-    <a href="../formulario/FormUsuarios.php">Agregar Usuario</a> 
-
-
 </table>
+ <div class="contenedor-btn-agregar"> 
+<a href="../formulario/FormUsuarios.php" class="btn">Agregar Usuario</a> 
+</div>

@@ -18,9 +18,11 @@ function create_socio()
 
         $resultado = mysqli_query($conex, $sql);
 
-        if (!$resultado) {
-            $errores[] = "No se pudo registrar el socio";
-        }
+        if ($resultado) {
+               header("Location: ../pag/socios.php");
+        exit;
+        }else{$errores[] = "No se pudo registrar el socio";}
+
 
         return $errores;
     }

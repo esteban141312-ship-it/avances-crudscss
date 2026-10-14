@@ -28,3 +28,11 @@
     <button type="submit" name="registrar">Registrar socio</button>
 
 </form>
+
+<?php
+require __DIR__ . "/../includes/socio/createSocio.php";
+create_socio();
+
+
+?>
+

@@ -56,9 +56,9 @@ $socios = obtener_socio();
                     <td><?= $s['direccion'] ?></td>
                     <td><?= $s['telefono'] ?></td>
                     <td>
-                        <a href="../includes/users/EliminarUs.php?id=<?php echo $s['cedula'] ?>">Eliminar</a>
-                        <?php echo " || " ?>
-                        <a href="../formulario/modificar.php?id=<?php echo $s['cedula'] ?>">actualizar</a>
+                        <a class="btn-eliminar" href="../includes/socio/eliminarSocio.php?cedula=<?php echo $s['cedula'] ?>">Eliminar</a>
+                        
+                        <a class="btn-actualizar" href="../includes/socio/actualizarSocio.php?cedula=<?php echo $s['cedula'] ?>">actualizar</a>
                     </td>
                 </tr>
             <?php endwhile; ?>

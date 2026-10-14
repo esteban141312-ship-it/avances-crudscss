@@ -1,6 +1,7 @@
 <?php
 
-require "../../db/conexion.php";
+// require "../../db/conexion.php";
+require __DIR__ . "/../../db/conexion.php";
 
 $id = $_POST['id'];
 
