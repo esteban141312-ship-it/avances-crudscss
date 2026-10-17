@@ -1,3 +1,8 @@
+<?php
+require __DIR__ . "/../includes/funciones.php";
+$resultado=obtener_barcos();
+?>
+
 <form action="" method="POST">
 
     <label for="Fecha">Fecha:</label>
@@ -19,10 +24,13 @@
     <select id="Barcos_Matricula" name="Barcos_Matricula" required>
 
         <option value="">Seleccione un barco</option>
-
-        <option value="">
-            <!-- Aquí irá la consulta de los barcos -->
+        <?php while ($barco = mysqli_fetch_assoc($resultado) ) {?>
+        <option value = "<?php echo $barco['matricula'];?>">
+            <?php echo $barco['nombre'];?>
         </option>
+        <?php } ?>
+      
+        
      
     </select>
 
@@ -30,4 +38,8 @@
 
     <button type="submit" name="registrar">Registrar salida</button>
 
+
+
 </form>
+
+<!-- <a class="btn" href="../pag/salidas.php">Ir a salidas</a> -->

@@ -36,5 +36,5 @@ if ($nombre == "" || $apellido == "" || $telefono == "" || $direccion == "") {
 
 }
 ?>
-
+<a href="../../pag/socios.php">Volver a Socios</a>
  

@@ -56,9 +56,9 @@ $salidas = obtener_salidas();
                     <td><?= $sa['Destino'] ?></td>
                     <td><?= $sa['Barcos_Matricula'] ?></td>
                     <td>
-                        <a href="../includes/users/EliminarUs.php?id=<?php echo $sa['IdSalida'] ?>">Eliminar</a>
+                        <a href="../includes/salidas/eliminarSalidas.php?idSalida=<?php echo $sa['IdSalida'] ?>">Eliminar</a>
                         <?php echo " || " ?>
-                        <a href="../formulario/modificar.php?id=<?php echo $sa['IdSalida'] ?>">actualizar</a>
+                        <a href="../includes/salidas/actualizarSalidas.php?idSalida=<?php echo $sa['IdSalida'] ?>">actualizar</a>
                     </td>
                 </tr>
             <?php endwhile; ?>
@@ -71,7 +71,7 @@ $salidas = obtener_salidas();
 
 
 
-    <a class="btn" href="../formulario/createsalidasForm.php">Nueva salida</a>
+    <a class="btn" href="../includes/salidas/createSalidas.php">Nueva salida</a>
 
 
 

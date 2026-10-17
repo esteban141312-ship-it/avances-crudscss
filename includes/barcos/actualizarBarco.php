@@ -11,8 +11,8 @@ $nombre = $_POST['nombre'];
 $amarre = $_POST['amarre'];
 
 $cuota=$_POST["cuota_amarre"];
-$cedula = $_POST['cedula'];
-if ($nombre == "" || $amarre == "" || $cuota == "" || $cedula == "") {
+// $cedula = $_POST['cedula'];
+if ($nombre == "" || $amarre == "" || $cuota == "" ) {
 
     echo "Debe llenar todos los campos";
 
@@ -21,9 +21,7 @@ if ($nombre == "" || $amarre == "" || $cuota == "" || $cedula == "") {
     $sql = "UPDATE barco SET 
             nombre = '$nombre',
             amarre = '$amarre',
-            cuota_amarre = '$cuota',
-            -- socio_cedula = '$cedula'
-
+            cuota_amarre = '$cuota'
             WHERE matricula = '$matricula'";
 
     $resultado = mysqli_query($conex, $sql);
@@ -31,9 +29,10 @@ if ($nombre == "" || $amarre == "" || $cuota == "" || $cedula == "") {
     if ($resultado) {
         echo "Barco actualizado correctamente";
     } else {
-        echo "Error al actualizar: ";
+        echo "Error al actualizar: "  . mysqli_error($conex);;
     }
 }
 
 }
 ?>
+<a href="../../pag/barcos.php">Volver a barcos</a>

@@ -28,3 +28,4 @@ function create_socio()
     }
 }
 ?>
+<a href="../../pag/socios.php">Volver a Socios</a>

@@ -23,7 +23,7 @@ $resultado= obtener_socio();
     
 
     
-    <input type="hidden" name="cedula" value="<?= $matricula ?>">
+    <input type="hidden" name="matricula" value="<?= $matricula ?>">
     <input type="submit" name="actualizar" value="Actualizar">
 
 </form>
