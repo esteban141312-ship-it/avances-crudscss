@@ -1,8 +1,7 @@
 <?php
 session_start();
 
-// La portada dirige al visitante sin incluir otra página: de ese modo PHP
-// puede enviar correctamente las cabeceras de redirección.
+//si inicia sesion al login, si hay sesion iniciar, va ala barra de opciones
 if (isset($_SESSION['usuario'])) {
     header('Location: pag/navOpciones.php');
 } else {
