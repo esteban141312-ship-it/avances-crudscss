@@ -1,8 +1,10 @@
 <?php
+session_start();
 
 $cedula = $_GET['cedula'];
 
 ?>
+<link rel="stylesheet" href="../../dist/css/app.css">
 
 <h1>Actualizar socio</h1>
 
@@ -30,4 +32,8 @@ $cedula = $_GET['cedula'];
 
 </form>
 
-<a href="../../pag/socios.php">Ir a los socios</a>
+<?php if (isset($_SESSION['usuario'])) { ?>
+<div class="contenedor-btn-agregar">
+    <a class="btn" href="../../pag/socios.php">Volver a socios</a>
+</div>
+<?php } ?>

@@ -23,7 +23,7 @@ import gulpSass from 'gulp-sass';
 const sass = gulpSass(dartSass);
 
 export function css( callback ){
-    src("src/scss/style.scss")
+    src("src/scss/app.scss")
     .pipe( sass().on("error", sass.logError) )
     .pipe( dest("dist/css"));
     callback();

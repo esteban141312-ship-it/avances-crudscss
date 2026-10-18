@@ -2,6 +2,7 @@
 require __DIR__ . "/../includes/funciones.php";
 $resultado=obtener_barcos();
 ?>
+<link rel="stylesheet" href="../../dist/css/app.css">
 
 <form action="" method="POST">
 

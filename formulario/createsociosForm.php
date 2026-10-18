@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="../dist/css/app.css">
 <form action="" method="POST">
 
     <label for="cedula">Cédula:</label>

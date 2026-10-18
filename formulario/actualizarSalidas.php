@@ -1,8 +1,10 @@
 <?php
+session_start();
 
 $idSalidas = $_GET['idSalida'];
 
 ?>
+<link rel="stylesheet" href="../../dist/css/app.css">
 
 <form action="" method="POST">
 
@@ -26,3 +28,9 @@ $idSalidas = $_GET['idSalida'];
 
 
 </form>
+
+<?php if (isset($_SESSION['usuario'])) { ?>
+<div class="contenedor-btn-agregar">
+    <a class="btn" href="../../pag/salidas.php">Volver a salidas</a>
+</div>
+<?php } ?>

@@ -1,12 +1,17 @@
 <?php
+session_start();
 require __DIR__ . "/../includes/funciones.php";
 $resultado= obtener_socio();
  $matricula = $_GET['matricula'];
 
 ?>
-
+<head>
+    <meta charset="UTF-8">
+    <title>actualizar</title>
+    <link rel="stylesheet" href="../../dist/css/app.css">
+</head>
 <h1>Actualizar barco</h1>
-
+<div class="contenedor-form">
 <form action="" method="POST">
 <input type="hidden" name="matricula" value="<?= $matricula ?>">
     
@@ -27,5 +32,9 @@ $resultado= obtener_socio();
     <input type="submit" name="actualizar" value="Actualizar">
 
 </form>
-
-<a href="../../pag/barcos.php">Ir a los barcos</a>
+</div>
+<?php if (isset($_SESSION['usuario'])) { ?>
+<div class="contenedor-btn-agregar">
+    <a class="btn" href="../../pag/barcos.php">Volver a barcos</a>
+</div>
+<?php } ?>

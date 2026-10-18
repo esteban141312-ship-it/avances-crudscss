@@ -23,13 +23,15 @@ if ($nombre == "" || $apellido == "" || $cedula == "" || $correo == "" || $telef
 
 } else {
 
+    $hash = password_hash($contraseña, PASSWORD_DEFAULT);
+
     $sql = "UPDATE usuarios SET 
             nombre = '$nombre',
             apellido = '$apellido',
             cedula = '$cedula',
             correo = '$correo',
             celular = '$telefono',
-            contraseña = '$contraseña'
+            contraseña = '$hash'
             WHERE id = '$id'";
 
     $resultado = mysqli_query($conex, $sql);

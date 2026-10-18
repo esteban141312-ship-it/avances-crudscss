@@ -17,7 +17,7 @@ $salidas = obtener_salidas();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../dist/css/style.css">
+    <link rel="stylesheet" href="../dist/css/app.css">
     <title>barcos</title>
 </head>
 
@@ -55,10 +55,21 @@ $salidas = obtener_salidas();
                     <td><?= $sa['Hora'] ?></td>
                     <td><?= $sa['Destino'] ?></td>
                     <td><?= $sa['Barcos_Matricula'] ?></td>
-                    <td>
-                        <a href="../includes/salidas/eliminarSalidas.php?idSalida=<?php echo $sa['IdSalida'] ?>">Eliminar</a>
-                        <?php echo " || " ?>
-                        <a href="../includes/salidas/actualizarSalidas.php?idSalida=<?php echo $sa['IdSalida'] ?>">actualizar</a>
+                    <td class="contenedor-acciones">
+                        <a class="btn-eliminar" href="../includes/salidas/eliminarSalidas.php?idSalida=<?php echo $sa['IdSalida'] ?>"><svg xmlns="http://www.w3.org/2000/svg" 
+     width="24" 
+     height="24" 
+     fill="none" 
+     viewBox="0 0 24 24">
+    <path
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M4 7h16M10 11v6m4-6v6M6 7l1 12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2l1-12M9 7V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3"
+    />
+</svg></a>
+                        <a class="btn-actualizar" href="../includes/salidas/actualizarSalidas.php?idSalida=<?php echo $sa['IdSalida'] ?>">actualizar</a>
                     </td>
                 </tr>
             <?php endwhile; ?>

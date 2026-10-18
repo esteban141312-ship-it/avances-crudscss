@@ -17,7 +17,7 @@ $socios = obtener_socio();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../dist/css/style.css">
+    <link rel="stylesheet" href="../dist/css/app.css">
     <title>socios</title>
 </head>
 
@@ -55,8 +55,20 @@ $socios = obtener_socio();
                     <td><?= $s['apellidos'] ?></td>
                     <td><?= $s['direccion'] ?></td>
                     <td><?= $s['telefono'] ?></td>
-                    <td>
-                        <a class="btn-eliminar" href="../includes/socio/eliminarSocio.php?cedula=<?php echo $s['cedula'] ?>">Eliminar</a>
+                    <td class="contenedor-acciones">
+                        <a class="btn-eliminar" href="../includes/socio/eliminarSocio.php?cedula=<?php echo $s['cedula'] ?>"><svg xmlns="http://www.w3.org/2000/svg" 
+     width="24" 
+     height="24" 
+     fill="none" 
+     viewBox="0 0 24 24">
+    <path
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M4 7h16M10 11v6m4-6v6M6 7l1 12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2l1-12M9 7V4a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v3"
+    />
+</svg></a>
                         
                         <a class="btn-actualizar" href="../includes/socio/actualizarSocio.php?cedula=<?php echo $s['cedula'] ?>">actualizar</a>
                     </td>
@@ -70,9 +82,9 @@ $socios = obtener_socio();
 
 
 
-
+    <div class="contenedor-btn-agregar"> 
     <a class="btn" href="../formulario/createsociosForm.php">Nuevo socio</a>
-
+    </div>
 
 
 

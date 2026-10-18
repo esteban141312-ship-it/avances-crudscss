@@ -1,3 +1,79 @@
+.contenedor-todo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 50px auto;
+}
+
+.contenedor-form {
+  width: 400px;
+}
+
+.contenedor-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+form {
+  background-color: #FFFFFF;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contenedor-form form {
+  margin: 0;
+}
+
+label {
+  font-weight: bold;
+  color: #4e7398;
+}
+
+input,
+select {
+  padding: 0.7rem;
+  border: 1px solid #808080;
+  border-radius: 5px;
+  font-family: "Arial", sans-serif;
+  width: 100%;
+}
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #61a9d8;
+}
+
+form button,
+form input[type=submit] {
+  background-color: #4e7398;
+  color: #f5f7e9;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+form button:hover,
+form input[type=submit]:hover {
+  background-color: #61a9d8;
+}
+
+.contenedor-tabla-barcos {
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+}
+
 body {
   background-color: #f5f7e9;
   font-family: "Arial", sans-serif;
@@ -37,6 +113,8 @@ body {
 
 table {
   margin: 50px auto;
+  margin-left: auto;
+  margin-right: auto;
   border-spacing: 30px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   background-color: #FFFFFF;
@@ -107,6 +185,7 @@ a {
 }
 
 .btn-eliminar {
+  display: flex;
   text-decoration: none;
   background-color: #e25f23;
   color: #f5f7e9;
@@ -115,6 +194,7 @@ a {
   font-size: 1rem;
   font-weight: 600;
   text-align: center;
+  justify-content: center;
   transition: background-color 0.3s ease, transform 0.2s ease;
   cursor: pointer;
 }
@@ -163,25 +243,9 @@ input {
   transform: scale(0.98);
 }
 
-.contenedor-todo {
+.contenedor-acciones {
   display: flex;
   flex-direction: column;
+  gap: 0.5rem;
   align-items: center;
-  text-align: center;
-  margin: 50px auto;
-}
-
-.contenedor-form {
-  width: 400px;
-  padding: 30px;
-  background-color: white;
-  border-radius: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  display: block;
-  justify-content: center;
-}
-
-.contenedor-tabla-barcos {
-  padding: 30px;
-  width: 400px;
 }

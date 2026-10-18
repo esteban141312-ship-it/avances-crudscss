@@ -63,6 +63,8 @@ body {
 table {
 
     margin: 50px auto;
+    margin-left: auto;
+    margin-right: auto;
     border-spacing: 30px;
     box-shadow: v.$sombra;
     background-color: v.$color-blanco;
@@ -158,18 +160,21 @@ a {
 }
 
 .btn-eliminar {
+    display:flex;
     text-decoration: none;
 
     // 3. Colores y espaciado (Relleno)
     background-color: v.$color-naranja;
     color: v.$color-fondo;
     padding: 12px 24px;
-
+    
     // 4. Bordes y tipografía
     border-radius: 6px; // Esquinas redondeadas
     font-size: 1rem;
     font-weight: 600;
     text-align: center;
+    justify-content: center;
+    
 
 
     transition: background-color 0.3s ease, transform 0.2s ease;
@@ -233,4 +238,11 @@ width: 100%;
     &:active {
         transform: scale(0.98);
     }
+}
+
+.contenedor-acciones{
+        display: flex;
+    flex-direction: column;
+    gap: 0.5rem; // separación entre botones
+    align-items: center;
 }

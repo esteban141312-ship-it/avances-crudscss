@@ -1,8 +1,10 @@
 <?php
+session_start();
 
 $id = $_GET['id'];
 
 ?>
+<link rel="stylesheet" href="../dist/css/app.css">
 
 <h1>Modificar Usuario</h1>
 
@@ -34,3 +36,9 @@ $id = $_GET['id'];
     <input type="submit" name="actualizar" value="Registrar">
 
 </form>
+
+<?php if (isset($_SESSION['usuario'])) { ?>
+<div class="contenedor-btn-agregar">
+    <a class="btn" href="../pag/Users.php">Volver a usuarios</a>
+</div>
+<?php } ?>
